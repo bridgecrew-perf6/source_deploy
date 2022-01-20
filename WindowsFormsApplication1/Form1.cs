@@ -195,7 +195,7 @@ namespace WindowsFormsApplication1
             }
             return temp_str;
         }
-        private void Radio_Btn_Clk(object sender, MouseEventArgs e) // 프론트 사이트 RADIO 선택 시
+        private void Radio_Btn_Clk(object sender, MouseEventArgs e) // 사이트별 RADIO 버튼 선택 시
         {
             int datagrid_count = dataGridView1.Rows.Count;
             if (datagrid_count > 0)
@@ -368,8 +368,6 @@ namespace WindowsFormsApplication1
                         copy_dest = Cb_Drive_Num1 + Server_Num1 + (full_file.Substring(file_t_c, (full_file.Length - file_t_c)));
                         copy_dest2 = Cb_Drive_Num2 + Server_Num2 + (full_file.Substring(file_t_c, (full_file.Length - file_t_c)));
                         FileInfo fi = new FileInfo(@copy_dest);
-                        //FileInfo fi2 = new FileInfo(@copy_dest + "\\" + full_file);
-                        //if (fi.Exists != false && fi2.Exists != false)
                         if (fi.Exists != false)
                         {
                             File.Copy(@copy_dest, @back_dest_file, true);
