@@ -368,7 +368,8 @@ namespace WindowsFormsApplication1
                         copy_dest = Cb_Drive_Num1 + Server_Num1 + (full_file.Substring(file_t_c, (full_file.Length - file_t_c)));
                         copy_dest2 = Cb_Drive_Num2 + Server_Num2 + (full_file.Substring(file_t_c, (full_file.Length - file_t_c)));
                         FileInfo fi = new FileInfo(@copy_dest);
-
+                        //FileInfo fi2 = new FileInfo(@copy_dest + "\\" + full_file);
+                        //if (fi.Exists != false && fi2.Exists != false)
                         if (fi.Exists != false)
                         {
                             File.Copy(@copy_dest, @back_dest_file, true);
